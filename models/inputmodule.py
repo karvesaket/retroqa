@@ -5,8 +5,8 @@ from torch.nn import functional as F
 import torch.nn.init as init
 from torch.autograd import Variable
 
-# device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-device = 'cpu'
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+# device = 'cpu'
 
 class SketchyReading(nn.Module):
   def __init__(self, mode, vocab_size, embedding_length, word_embeddings=None, bert_encoder=None):

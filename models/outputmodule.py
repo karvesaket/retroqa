@@ -5,8 +5,8 @@ from torch.nn import functional as F
 import torch.nn.init as init
 from torch.autograd import Variable
 
-# device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-device = 'cpu'
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+# device = 'cpu'
 
 class OutputModule(nn.Module):
   def __init__(self, hidden_size):

@@ -3,8 +3,8 @@ from experiment import Experiment
 
 if __name__ == '__main__':
     run_mode = 'word'
-    train_path = 'data/mini-combined-newsqa-data-v2.csv'
-    val_path = 'data/mini-combined-newsqa-data-v2.csv'
+    train_path = '/content/drive/Shared drives/CIS 700-1 Final Project/Data/combined-newsqa-data-spacy-train.csv'
+    val_path = '/content/drive/Shared drives/CIS 700-1 Final Project/Data/combined-newsqa-data-spacy-val.csv'
 
     print("Loading dataset...")
     dataset = NewsQADataset(run_mode, train_path, val_path)

@@ -6,8 +6,8 @@ import torch
 
 from models.model import Model
 
-# device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-device = 'cpu'
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+# device = 'cpu'
 
 class EvaluationMetrics():
 

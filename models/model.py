@@ -9,7 +9,8 @@ from .memorymodule import EpisodicMemoryModule
 from .verificationmodule import VerificationModule
 from .outputmodule import OutputModule
 
-device = 'cpu'
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') 
+# device = 'cpu'
 
 class Model(nn.Module):
   def __init__(self, sketchy_mode, intensive_mode, pool_mode, vocab_size, hidden_size, embedding_length, word_embeddings, bert_encoder=None, num_passes=3):
