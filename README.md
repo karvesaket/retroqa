@@ -8,4 +8,8 @@ Abstract: In recent years, memory networks have seen great success in the task o
 Model architecture:
 ![Model architecture](model.png)
 
-To run our code, please run the run.py script. This will load the spaCy tokenized versions of the [training](https://drive.google.com/file/d/1pE5ohlo0IVYw--Z8U3l_9xHhxV9fd23Z/view) and [validation](https://drive.google.com/file/d/1-58hzWASQ43hZrryRKl0WvQ4JnG-2pbM/view) sets and perform the experiments.
+The dataset pre-processing code can be found [here](preprocessing.ipynb).
+
+All the code we experimented with can be found [here](CIS_700_Final_Project.ipynb). Run all the cells marked with (R) in their title to reproduce results. The last section of the notebook contains the different experiments we performed.
+
+To run our code we also created an easy to use script. Please run the run.py script to reproduce results. Before running the code, download the processed version of the [training](https://drive.google.com/file/d/1pE5ohlo0IVYw--Z8U3l_9xHhxV9fd23Z/view) and [validation](https://drive.google.com/file/d/1-58hzWASQ43hZrryRKl0WvQ4JnG-2pbM/view) sets and add them to the a folder within this repo.
