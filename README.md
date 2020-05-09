@@ -9,4 +9,4 @@ Model architecture:
 
 ![Model architecture](model.png)
 
-To run our code,
+To run our code, please run the run.py script. This will load the spaCy tokenized versions of the training and validation set and perform the experiments.
