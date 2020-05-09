@@ -9,4 +9,4 @@ Model architecture:
 
 ![Model architecture](model.png)
 
-To run our code, please run the run.py script. This will load the spaCy tokenized versions of the [training](https://drive.google.com/drive/folders/1lupUpHV4hjzV3bzK3CaKYzl1kUMCt46f) and [validation](https://drive.google.com/drive/folders/1lupUpHV4hjzV3bzK3CaKYzl1kUMCt46f) sets and perform the experiments.
+To run our code, please run the run.py script. This will load the spaCy tokenized versions of the [training](https://drive.google.com/file/d/1pE5ohlo0IVYw--Z8U3l_9xHhxV9fd23Z/view) and [validation](https://drive.google.com/file/d/1-58hzWASQ43hZrryRKl0WvQ4JnG-2pbM/view) sets and perform the experiments.
