@@ -132,7 +132,7 @@ class Experiment():
   def train_classifier(self, model, dataset_iterator, loss_function, optimizer, vocab_itos, \
                      num_epochs = 10, log = "runs", verbose = True, print_every = 100, expt_name = "default", start_epoch = 0):
     #tensorboard writer
-    writer = SummaryWriter(log_dir=log)
+    # writer = SummaryWriter(log_dir=log)
     model.train()
     step = 0
     parallel = False
@@ -226,21 +226,6 @@ class Experiment():
 
         total += len(true_start_index)
         
-
-        if ((step % print_every) == 0):
-          if parallel:
-            writer.add_scalar("External Loss/train", total_ext_loss/epoch_step, step)
-            writer.add_scalar("Final Loss/train", total_loss/epoch_step, step)
-          else:
-            writer.add_scalar("Loss/train", total_loss/epoch_step, step)
-          writer.add_scalar("F1/train", total_f1/epoch_step, step)
-          writer.add_scalar("EM/train", total_em/epoch_step, step)
-          writer.add_scalar("Start Acc/train", correct_start/total, step)
-          writer.add_scalar("End Acc/train", correct_end/total, step)
-          writer.add_scalar("Acc/train", correct_both/total, step)
-          
-          writer.add_text("Predictions", '\n'.join(all_pred_text), step)
-          writer.add_text("True", '\n'.join(all_true_text), step)
           if verbose:
             if parallel:
               print("--- Step: %s Ext Loss: %s Final Loss: %s Start Acc: %s End Acc: %s Acc: %s F1: %s EM: %s" %(step, total_ext_loss/epoch_step, total_loss/epoch_step, (correct_start*100)/total, (correct_end*100)/total, (correct_both*100)/total, (total_f1 * 100)/epoch_step, (total_em * 100)/epoch_step))
